@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlagPost – Request Account Deletion</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f5f5f5;
+      color: #212121;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #2196F3;
+      color: #fff;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    header h1 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    header .app-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    main {
+      flex: 1;
+      max-width: 640px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 28px 20px 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .card h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #2196F3;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card h2 .icon {
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    .card p:last-child { margin-bottom: 0; }
+
+    .steps {
+      list-style: none;
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .steps li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    .steps li .step-num {
+      background: #2196F3;
+      color: #fff;
+      border-radius: 50%;
+      min-width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #E3F2FD;
+      color: #1565C0;
+      border-radius: 6px;
+      padding: 2px 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .data-list {
+      list-style: none;
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .data-list li {
+      font-size: 0.93rem;
+      color: #444;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .data-list li::before {
+      content: "✕";
+      color: #e53935;
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 12px 22px;
+      background: #2196F3;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-align: center;
+      transition: background 0.15s;
+    }
+
+    .btn:hover { background: #1976D2; }
+
+    .note {
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.82rem;
+      color: #999;
+    }
+
+    footer a {
+      color: #2196F3;
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    @media (prefers-color-scheme: dark) {
+      body { background: #121212; color: #e0e0e0; }
+      .card { background: #1e1e1e; box-shadow: 0 1px 3px rgba(0,0,0,0.4); }
+      .card p, .steps li, .data-list li { color: #ccc; }
+      .badge { background: #1a3a5c; color: #90CAF9; }
+      header { background: #1565C0; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="app-icon">&#127988;</div>
+    <h1>FlagPost<br><span style="font-weight:400;font-size:0.9rem;opacity:0.9;">Request Account Deletion</span></h1>
+  </header>
+
+  <main>
+
+    <!-- Method 1: in-app -->
+    <div class="card">
+      <h2><span class="icon">&#128241;</span> Delete directly in the app <span class="badge">Fastest</span></h2>
+      <p>The quickest way to delete your account is directly from within FlagPost:</p>
+      <ol class="steps">
+        <li><span class="step-num">1</span> Open the FlagPost app and sign in.</li>
+        <li><span class="step-num">2</span> Tap the <strong>Settings</strong> icon (top right).</li>
+        <li><span class="step-num">3</span> Scroll to <strong>Danger zone</strong>.</li>
+        <li><span class="step-num">4</span> Tap <strong>Delete account and data</strong> and confirm.</li>
+      </ol>
+      <p class="note">Your account and all associated data will be deleted immediately.</p>
+    </div>
+
+    <!-- Method 2: email -->
+    <div class="card">
+      <h2><span class="icon">&#9993;&#65039;</span> Request deletion by email</h2>
+      <p>If you no longer have access to the app, you can request deletion by email. Please include your registered nickname in the message so we can identify your account.</p>
+      <a class="btn"
+         href="mailto:valentinoricco@gmail.com?subject=FlagPost%20%E2%80%93%20Account%20Deletion%20Request&body=Hi%2C%0A%0AI%20would%20like%20to%20request%20the%20deletion%20of%20my%20FlagPost%20account.%0A%0AMy%20nickname%3A%20">
+        Send deletion request
+      </a>
+      <p class="note">Requests sent by email are processed within <strong>30 days</strong>.</p>
+    </div>
+
+    <!-- What gets deleted -->
+    <div class="card">
+      <h2><span class="icon">&#128465;&#65039;</span> What data gets deleted</h2>
+      <p>When your account is deleted, the following data is permanently removed:</p>
+      <ul class="data-list">
+        <li>Your profile (nickname, flag, travel status, location)</li>
+        <li>All messages posted on the Board</li>
+        <li>All chat conversations and chat history</li>
+        <li>Location data and location history</li>
+        <li>Any blocked-user records associated with your account</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <footer>
+    <a href="https://vale717171.github.io/flagpost-privacy/">Privacy Policy</a>
+    &nbsp;&middot;&nbsp;
+    &copy; FlagPost
+  </footer>
+
+</body>
+</html>
